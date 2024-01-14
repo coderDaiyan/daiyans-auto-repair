@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
 import AddService from "./Components/Admin/AddService/AddService";
 import AdminRoute from "./Components/Admin/AdminRoute/AdminRoute";
@@ -24,7 +24,7 @@ function App() {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://cryptic-retreat-15947.herokuapp.com/services")
+    fetch("https://me-auto-repair.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
